@@ -54,6 +54,7 @@ workflows:
   firstscript:
     # Run the welcome/run job in its own container
     jobs:
-     requires:
-           - print_hello
-           - print_world
+      - print_hello
+      - print_world:  
+         requires:
+          - print_hello
